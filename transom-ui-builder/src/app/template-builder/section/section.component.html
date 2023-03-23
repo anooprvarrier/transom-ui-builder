@@ -1,0 +1,91 @@
+<ng-container *ngIf="section">
+  <div
+    cdkDropList
+    id="{{ section.id }}"
+    [cdkDropListData]="section.items"
+    (cdkDropListDropped)="onDrop($event)"
+    cdkDropListConnectedTo="fieldsList"
+    class="Section FieldList"
+    [attr.repeat]="section.repeat ? '' : null"
+  >
+    <div
+      *ngFor="let item of section.items; index as i"
+      class="FormGroup {{ item.customClass }} {{
+        item.visible ? '' : 'hidden'
+      }}"
+      cdkDragBoundary="FieldList"
+      cdkDragLockAxis="y"
+      cdkDrag
+      [ngClass]="{ Selected: item === selectedItem }"
+      [ngSwitch]="item.control"
+    >
+      <div class="IconWrapper">
+        <div class="Icon EditIcon">
+          <mat-icon (click)="onItemSelect(item)" *ngIf="!selectedItem"
+            >edit</mat-icon
+          >
+        </div>
+        <div class="Icon EditIcon" *ngIf="selectedItem">
+          <mat-icon (click)="onItemSelect(null)">cancel</mat-icon>
+        </div>
+        <div class="Icon HandleIcon" cdkDragHandle>
+          <mat-icon>drag_indicator</mat-icon>
+        </div>
+        <div class="Icon DeleteIcon">
+          <mat-icon (click)="delete(i)">delete_forever</mat-icon>
+        </div>
+        <div class="Icon VisibleIcon" *ngIf="item.hasOwnProperty('visible')">
+          <mat-icon>{{
+            item.visible ? "visibility" : "visibility_off"
+          }}</mat-icon>
+        </div>
+      </div>
+
+      <label
+        *ngIf="
+          item.type === 'input' ||
+          item.type === 'textarea' ||
+          item.type === 'select'
+        "
+        for="{{ item.id }}"
+      >
+        {{ item.label }}:
+        <span class="Required" *ngIf="item.required">*</span>
+      </label>
+
+      <input
+        *ngSwitchCase="'Input'"
+        class="FormControl input {{
+          item.type === 'date'
+            ? item.isPastDate
+              ? 'datepicker nonFutureDate past-date'
+              : 'datepicker'
+            : ''
+        }}"
+        id="{{ item.id }}"
+        name="{{ item.name }}"
+        type="{{ item.type }}"
+        placeholder="{{ item.text }}"
+        value="{{ item.value }}"
+        [attr.required]="item.required ? '' : null"
+        [attr.readonly]="item.readonly ? '' : null"
+        [attr.min]="item.type === 'number' ? item.min : null"
+        [attr.max]="item.type === 'number' ? item.max : null"
+      />
+
+      <textarea
+        class="FormControl"
+        id="{{ item.id }}"
+        name="{{ item.name }}"
+        placeholder="{{ item.text }}"
+        value="{{ item.value }}"
+        [attr.required]="item.required ? '' : null"
+        [attr.readonly]="item.readonly ? '' : null"
+        [attr.rows]="item.rows"
+        [attr.columns]="item.columns"
+        *ngSwitchCase="'Text Area'"
+      >
+      </textarea>
+    </div>
+  </div>
+</ng-container>

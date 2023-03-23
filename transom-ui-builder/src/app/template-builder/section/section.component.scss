@@ -1,0 +1,65 @@
+.Section {
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 10px 5px;
+    min-height: 100px;
+    .FormGroup {
+        margin: var(--xs-size) var(--xs-size);
+        padding: var(--s-size) var(--xs-size);
+        background-color: var(--off-white);
+        border-radius: 5px;
+        &.Selected {
+            padding: 5px;
+            border-radius: 5px;
+            background: var(--light-grey);
+        }
+        .IconWrapper {
+            display: flex;
+            justify-content: flex-end;
+            column-gap: var(--xs-small);
+            .Icon {
+                width: 24px;
+                height: 24px;
+                &.EditIcon {
+                    color: var(--dark-grey);
+                    cursor: pointer;
+                }
+                &.HandleIcon {
+                    cursor: move;
+                    color: var(--dark-grey);
+                }
+                &.DeleteIcon {
+                    cursor: pointer;
+                    color: var(--danger);
+                }
+                &.VisibleIcon {
+                    cursor: pointer;
+                    color: var(--dark-grey);
+                }
+            }
+        }
+
+        .Required {
+            color: var(--danger);
+        }
+
+        .FormControl {
+            width: 100%;
+            outline: none;
+            border: 1px solid var(--dark-grey);
+            border-radius: var(--s-size);
+
+            &.input {
+                height: 40px;
+            }
+            :hover {
+                border: 1px solid var(--blue);
+            }
+            :focus {
+                border: 1px solid var(--dark-blue);
+            }
+        }
+    }
+}

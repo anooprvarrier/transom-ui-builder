@@ -1,0 +1,90 @@
+{
+  "categories": [
+    {
+      "name": "General",
+      "items": [
+        {
+          "control": "Input",
+          "visible": true,
+          "id": null,
+          "name": null,
+          "text": null,
+          "label": null,
+          "value": null,
+          "input": null,
+          "customClass": [],
+          "readonly": false,
+          "required": false,
+          "min": null,
+          "max": null,
+          "error": null,
+          "rows": 5,
+          "columns": 100
+        },
+        {
+          "control": "Text Area",
+          "visible": true,
+          "id": null,
+          "name": null,
+          "text": null,
+          "label": null,
+          "value": null,
+          "input": null,
+          "customClass": [],
+          "readonly": false,
+          "required": false,
+          "min": null,
+          "max": null,
+          "error": null,
+          "rows": 5,
+          "columns": 100
+        },
+        {
+          "control": "Checkbox",
+          "visible": true,
+          "id": null,
+          "label": null,
+          "value": null,
+          "checked": false
+        },
+        {
+          "control": "Radio",
+          "visible": true,
+          "id": null,
+          "name": null,
+          "label": null,
+          "value": null,
+          "checked": false
+        },
+        {
+          "control": "Select",
+          "visible": true,
+          "id": null,
+          "name": null,
+          "readonly": false,
+          "required": false,
+          "label": null,
+          "options": [
+            {
+              "value": null,
+              "label": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wrapper",
+      "section": true,
+      "items": [
+        {
+          "control": "Section",
+          "title": null,
+          "id": null,
+          "items": [],
+          "repeat": false
+        }
+      ]
+    }
+  ]
+}

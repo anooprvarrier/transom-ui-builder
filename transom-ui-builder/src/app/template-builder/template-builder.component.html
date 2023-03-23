@@ -1,0 +1,29 @@
+<div class="Container">
+  <div class="Container__Side Left">
+    <button class="Button Button__Full" (click)="addSection()">
+      Add Section
+    </button>
+
+    <div class="Container__Side__Title">Components</div>
+
+    <mat-accordion>
+      <transom-category
+        *ngFor="let category of categories"
+        [category]="category"
+        [sectionIds]="sectionIds"
+      >
+      </transom-category>
+    </mat-accordion>
+  </div>
+  <div class="Container__Middle">
+    <transom-drop-container
+      [form]="form"
+      (selectedField)="setSelectedItem($event)"
+      [sectionIds]="sectionIds"
+    ></transom-drop-container>
+  </div>
+  <div class="Container__Side Right">
+    <div class="Container__Side__Title">Attributes</div>
+    <!-- <app-attributes [field]="field"></app-attributes> -->
+  </div>
+</div>

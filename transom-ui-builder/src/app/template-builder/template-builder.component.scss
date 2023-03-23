@@ -1,0 +1,35 @@
+.Container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 80px);
+    margin-top: 82px;
+
+    .Container__Side {
+        width: 20%;
+        background-color: var(--side-bg-color);
+        padding: var(--m-size) var(--s-size);
+        color: var(--white);
+        overflow: auto;
+
+        &.Left {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        &.Right {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .Container__Side__Title {
+            font-size: var(--font-size-small);
+            padding-bottom: var(--xs-size);
+            margin-bottom: var(--s-size);
+            border-bottom: 1px solid var(--white);
+        }
+    }
+
+    .Container__Middle {
+        flex-grow: 1;
+    }
+}

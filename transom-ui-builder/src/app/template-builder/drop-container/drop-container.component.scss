@@ -1,0 +1,24 @@
+.DropContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--xs-size);
+    .DropContainer__Header {
+        display: flex;
+        justify-content: flex-end;
+        .CopyIcon {
+            cursor: pointer;
+            color: var(--grey);
+            margin: var(--xs-size);
+        }
+    }
+
+    .DropContainer_MainArea {
+        display: block;
+        height: calc(100vh - 150px);
+        margin: 0px var(--m-size);
+        padding: var(--s-size) var(--m-size);
+        border: 1px ridge var(--grey);
+        border-radius: var(--m-size);
+        overflow: auto;
+    }
+}

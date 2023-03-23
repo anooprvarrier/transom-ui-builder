@@ -1,0 +1,22 @@
+<section
+  *ngFor="let section of form?.sections; index as i"
+  class="SectionContainer"
+>
+  <div class="SectionContainer__Controllers">
+    <mat-icon class="Arrow" (click)="moveup(i)">arrow_upward</mat-icon>
+    <input
+      type="checkbox"
+      name="section"
+      id="{{ section.id }}"
+      class="CheckBox"
+      (click)="select(section)"
+    />
+    <mat-icon class="Delete" (click)="delete(i)">delete</mat-icon>
+    <mat-icon class="Arrow" (click)="movedown(i)">arrow_downward</mat-icon>
+  </div>
+  <transom-section
+    [section]="section"
+    (selectEmitter)="select($event)"
+    class="SectionComponent"
+  ></transom-section>
+</section>

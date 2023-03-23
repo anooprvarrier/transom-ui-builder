@@ -1,0 +1,29 @@
+.SectionContainer {
+  display: flex;
+  align-items: center;
+  column-gap: var(--xs-size);
+  .SectionContainer__Controllers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+    align-items: center;
+    .Arrow {
+      color: var(--dark-grey);
+      cursor: pointer;
+    }
+    .Checkbox {
+      border: 1px solid var(--dark-grey);
+      width: 18px;
+      height: 18px;
+    }
+    .Delete {
+      color: var(--danger);
+      cursor: pointer;
+    }
+  }
+  .SectionComponent {
+    width: 100%;
+    min-height: 100px;
+  }
+}

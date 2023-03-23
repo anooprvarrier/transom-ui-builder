@@ -1,0 +1,32 @@
+.Header {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+    background-color: var(--dark-blue);
+    padding: 0 var(--m-size);
+
+    .Header_NavWrapper {
+        display: flex;
+        column-gap: var(--m-size);
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .Header_NavWrapper__Logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .Header_NavWrapper__Title {
+            color: var(--white);
+            font-size: var(--l-size);
+            font-weight: 500;
+        }
+    }
+}

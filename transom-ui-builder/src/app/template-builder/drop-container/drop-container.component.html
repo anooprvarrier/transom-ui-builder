@@ -1,0 +1,13 @@
+<div class="DropContainer">
+  <div class="DropContainer__Header">
+    <mat-icon class="CopyIcon">file_copy</mat-icon>
+  </div>
+  <div class="DropContainer_MainArea">
+    <transom-form
+      [form]="form"
+      [sectionIds]="sectionIds"
+      (selectedField)="onItemSelect($event)"
+      (htmlCodeEmitter)="selHtmlCode($event)"
+    ></transom-form>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.Open {
+    background-color: var(--lightest-blue);
+    color: var(--white);
+}
+
+.Close {
+    background-color: var(--blue);
+}
+
+.FieldsList {
+    .Button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+.mat-expansion-panel-header {
+    padding: 10px 24px;
+    .mat-panel-title {
+        font-size: 24px;
+    }
+}
+
+
+.mat-expansion-panel{
+    font-size: 18px;
+    font-weight: 500;
+}

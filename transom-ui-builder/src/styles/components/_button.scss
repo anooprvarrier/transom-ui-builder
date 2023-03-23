@@ -1,0 +1,18 @@
+.Button {
+    background-color: var(--blue) !important;
+    color: var(--white);
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--light-gray);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.Button__Full {
+        width: 100%;
+
+        &:hover {
+            background-color: var(--light-blue) !important;
+        }
+    }
+}
