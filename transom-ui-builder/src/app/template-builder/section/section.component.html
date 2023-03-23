@@ -43,9 +43,9 @@
 
       <label
         *ngIf="
-          item.type === 'input' ||
-          item.type === 'textarea' ||
-          item.type === 'select'
+          item.control === 'Input' ||
+          item.control === 'Text Area' ||
+          item.control === 'Select'
         "
         for="{{ item.id }}"
       >

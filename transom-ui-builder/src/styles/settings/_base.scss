@@ -7,22 +7,4 @@ body {
     overflow: hidden;
 }
 
-// For scroll bars
-::ng-deep {
-    ::-webkit-scrollbar {
-        width: 5px;
-    }
 
-    ::-webkit-scrollbar-track {
-        margin: 0px 2px;
-        background: #eee;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: var(--gray-50);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: var(--gray-30);
-    }
-}

@@ -13,6 +13,7 @@ import { AttributesComponent } from './template-builder/attributes/attributes.co
 import { SectionComponent } from './template-builder/section/section.component';
 import { DropContainerComponent } from './template-builder/drop-container/drop-container.component';
 import { FormComponent } from './template-builder/form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { FormComponent } from './template-builder/form/form.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ...MAT_IMPORTS,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

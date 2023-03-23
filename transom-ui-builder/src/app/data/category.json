@@ -10,16 +10,13 @@
           "name": null,
           "text": null,
           "label": null,
-          "value": null,
-          "input": null,
           "customClass": [],
           "readonly": false,
           "required": false,
           "min": null,
           "max": null,
           "error": null,
-          "rows": 5,
-          "columns": 100
+          "type": "text"
         },
         {
           "control": "Text Area",
@@ -28,13 +25,9 @@
           "name": null,
           "text": null,
           "label": null,
-          "value": null,
-          "input": null,
           "customClass": [],
           "readonly": false,
           "required": false,
-          "min": null,
-          "max": null,
           "error": null,
           "rows": 5,
           "columns": 100

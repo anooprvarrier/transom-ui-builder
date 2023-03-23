@@ -1,1 +1,93 @@
-<p>attributes works!</p>
+<div class="attributes" *ngIf="(field | json) != '{}'">
+  <div class="control-wrapper inline" *ngIf="field.hasOwnProperty('visible')">
+    <label>Visibility:</label>
+    <input type="checkbox" [(ngModel)]="field.visible" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('id')">
+    <label>ID:</label>
+    <input type="text" [(ngModel)]="field.id" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('name')">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="field.name" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('text')">
+    <label>Placeholder:</label>
+    <input type="text" [(ngModel)]="field.text" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('label')">
+    <label>Label:</label>
+    <input type="text" [(ngModel)]="field.label" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('value')">
+    <label>Value:</label>
+    <input type="text" [(ngModel)]="field.value" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('type')">
+    <label>Input Type:</label>
+    <input type="text" [(ngModel)]="field.type" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('rows')">
+    <label>Rows:</label>
+    <input type="number" [(ngModel)]="field.rows" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('columns')">
+    <label>Columns:</label>
+    <input type="number" [(ngModel)]="field.columns" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('customClass')">
+    <label>Custom CSS Class:</label>
+    <input type="text" [(ngModel)]="field.customClass" />
+    <div class="hint">Seperate between classes by a Comma ','</div>
+  </div>
+
+  <div
+    class="control-wrapper"
+    *ngIf="field.hasOwnProperty('min') && field.type === 'number'"
+  >
+    <label>Minimum:</label>
+    <input type="number" [(ngModel)]="field.min" />
+  </div>
+
+  <div
+    class="control-wrapper"
+    *ngIf="field.hasOwnProperty('max') && field.type === 'number'"
+  >
+    <label>Maximum:</label>
+    <input type="number" [(ngModel)]="field.max" />
+  </div>
+
+  <div class="control-wrapper inline" *ngIf="field.hasOwnProperty('readonly')">
+    <label>Readonly:</label>
+    <input type="checkbox" [(ngModel)]="field.readonly" />
+  </div>
+
+  <div class="control-wrapper inline" *ngIf="field.hasOwnProperty('required')">
+    <label>Required:</label>
+    <input type="checkbox" [(ngModel)]="field.required" />
+  </div>
+
+  <div class="control-wrapper inline" *ngIf="field.hasOwnProperty('checked')">
+    <label>Checked:</label>
+    <input type="checkbox" [(ngModel)]="field.checked" />
+  </div>
+
+  <div class="control-wrapper inline" *ngIf="field.hasOwnProperty('repeat')">
+    <label>Repeat:</label>
+    <input type="checkbox" [(ngModel)]="field.repeat" />
+  </div>
+
+  <div class="control-wrapper" *ngIf="field.hasOwnProperty('error')">
+    <label>Enter Error Message:</label>
+    <textarea type="text" [(ngModel)]="field.error"></textarea>
+  </div>
+</div>

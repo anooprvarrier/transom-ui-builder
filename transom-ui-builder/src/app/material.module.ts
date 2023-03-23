@@ -11,7 +11,6 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
 export const MAT_IMPORTS = [
   DragDropModule,
   MatDialogModule,
